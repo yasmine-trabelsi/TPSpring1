@@ -14,8 +14,8 @@ import java.time.LocalDate;
 @Entity
 public class Abonnement {
     @Id
-    private Long numAbon ;
-    private LocalDate dateDebt ;
+    private int idFormation ;
+    private String titre  ;
     private LocalDate dateFin ;
     private Float prixAbon ;
     @Enumerated(EnumType.STRING)

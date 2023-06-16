@@ -10,14 +10,13 @@ import java.util.List;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("/skieur")
+@RequestMapping("/Skieur")
 public class SkieurRestController {
-
     ISkieurService iSkieurService ;
 
     @PostMapping("/addSkieur")
     public Skieur addSkieur(@RequestBody Skieur s){
-        return iSkieurService.addSkieur(s);
+        return ISkieurService.addSkieur(s);
     }
     @GetMapping("/get/{id}")
     public Skieur retrieveSkieurById(@PathVariable("id") Long id ){
@@ -34,5 +33,6 @@ public class SkieurRestController {
     @PutMapping("/assignSkieurPiste/{numSkieur}/{numPiste")
     public void assignSkieurToPiste(@PathVariable("numSkieur") Long numSkieur,@PathVariable("numPiste") Long numPiste ){
         iSkieurService.assignSkieurToPiste(numSkieur,numPiste);
+
     }
 }
